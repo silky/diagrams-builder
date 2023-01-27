@@ -48,21 +48,21 @@ library
                        Diagrams.Builder.Opts
                        Diagrams.Builder.Modules
                        Diagrams.Builder.CmdLine
-  build-depends:       base >= 4.10 && < 4.18,
-                       base-orphans >= 0.3 && < 0.9,
-                       mtl >= 2.1 && < 2.3,
-                       diagrams-lib >= 1.4 && < 1.5,
-                       hint >= 0.4 && < 0.10,
+  build-depends:       base,
+                       base-orphans,
+                       mtl,
+                       diagrams-lib,
+                       hint,
                        directory,
                        filepath,
-                       transformers >= 0.3 && < 0.7,
-                       split >= 0.2 && < 0.3,
-                       haskell-src-exts >= 1.18 && < 1.24,
-                       haskell-src-exts-simple >= 1.18 && < 1.24,
-                       cmdargs >= 0.6 && < 0.11,
-                       lens >= 4.0 && < 5.3,
-                       hashable >= 1.1 && < 1.5,
-                       exceptions >= 0.3 && < 0.11
+                       transformers,
+                       split,
+                       haskell-src-exts,
+                       haskell-src-exts-simple,
+                       cmdargs,
+                       lens,
+                       hashable,
+                       exceptions
   hs-source-dirs:      src
   default-language:    Haskell2010
   other-extensions:    StandaloneDeriving,
@@ -111,14 +111,14 @@ executable diagrams-builder-cairo
     buildable: False
 
   if flag(cairo)
-    build-depends:     base >= 4 && < 5,
+    build-depends:     base,
                        filepath,
                        directory,
                        diagrams-builder,
-                       diagrams-lib >= 1.4 && < 1.5,
-                       diagrams-cairo >= 1.4 && < 1.5,
-                       cmdargs >= 0.6 && < 0.11,
-                       lens >= 4.0 && < 5.2
+                       diagrams-lib,
+                       diagrams-cairo,
+                       cmdargs,
+                       lens
 
 executable diagrams-builder-svg
   main-is:             diagrams-builder-svg.hs
@@ -131,15 +131,15 @@ executable diagrams-builder-svg
     buildable: False
 
   if flag(svg)
-    build-depends:     base >= 4 && < 5,
+    build-depends:     base,
                        filepath,
                        directory,
                        diagrams-builder,
-                       diagrams-lib >= 1.4 && < 1.5,
-                       diagrams-svg >= 1.4 && < 1.5,
-                       svg-builder >= 0.1 && < 0.2,
-                       bytestring >= 0.9.2 && < 0.12,
-                       cmdargs >= 0.6 && < 0.11
+                       diagrams-lib,
+                       diagrams-svg,
+                       svg-builder,
+                       bytestring,
+                       cmdargs
 
 executable diagrams-builder-ps
   main-is:             diagrams-builder-ps.hs
@@ -152,14 +152,14 @@ executable diagrams-builder-ps
     buildable: False
 
   if flag(ps) || flag(postscript)
-    build-depends:     base >= 4 && < 5,
+    build-depends:     base,
                        filepath,
                        directory,
                        diagrams-builder,
-                       diagrams-lib >= 1.4 && < 1.5,
-                       diagrams-postscript >= 1.4 && < 1.5,
-                       cmdargs >= 0.6 && < 0.11,
-                       lens >= 3.8 && < 5.2
+                       diagrams-lib,
+                       diagrams-postscript,
+                       cmdargs,
+                       lens
 
 executable diagrams-builder-rasterific
   main-is:             diagrams-builder-rasterific.hs
@@ -172,15 +172,15 @@ executable diagrams-builder-rasterific
     buildable: False
 
   if flag(rasterific)
-    build-depends:     base >= 4 && < 5,
+    build-depends:     base,
                        filepath,
                        directory,
                        diagrams-builder,
-                       diagrams-lib >= 1.4 && < 1.5,
-                       diagrams-rasterific >= 1.4 && < 1.5,
-                       cmdargs >= 0.6 && < 0.11,
-                       lens >= 3.8 && < 5.2,
-                       JuicyPixels >= 3.1.5 && < 3.4
+                       diagrams-lib,
+                       diagrams-rasterific,
+                       cmdargs,
+                       lens,
+                       JuicyPixels
 
 executable diagrams-builder-pgf
   main-is:             diagrams-builder-pgf.hs
@@ -193,13 +193,13 @@ executable diagrams-builder-pgf
     buildable: False
 
   if flag(pgf)
-    build-depends:     base >= 4 && < 5,
+    build-depends:     base,
                        filepath,
                        directory,
                        diagrams-builder,
-                       diagrams-lib >= 1.4 && < 1.5,
-                       diagrams-pgf >= 1.4 && < 1.5,
-                       bytestring >= 0.10.2 && < 0.12,
-                       cmdargs >= 0.6 && < 0.11,
-                       lens >= 3.8 && < 5.2,
+                       diagrams-lib,
+                       diagrams-pgf,
+                       bytestring,
+                       cmdargs,
+                       lens,
                        texrunner
